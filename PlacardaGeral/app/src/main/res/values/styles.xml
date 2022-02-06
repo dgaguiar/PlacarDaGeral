@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="buttom_addition">
+        <item name="android:backgroundTint">@color/green</item>
+    </style>
+
+    <style name="buttom_removePoint">
+        <item name="android:backgroundTint">@color/red</item>
+    </style>
+
+    <style name="buttom_GameSelection">
+        <item name="android:backgroundTint">@color/black</item>
+        <item name="cornerRadius">16dp</item>
+    </style>
+
+
+</resources>

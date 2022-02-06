@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Placar da Geral</string>
+    <string name="message_to_share">O jogo entre %1s e %2s terminou %3d e %4d</string>
+</resources>

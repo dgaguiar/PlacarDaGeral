@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Football.FootballActivity">
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
+        android:text="Placar da Geral"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFScorePlayerOne"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="52dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="72dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="X"
+        android:textAlignment="center"
+        android:textSize="72dp"
+        app:layout_constraintEnd_toStartOf="@+id/tvScoreFPlayerTwo"
+        app:layout_constraintStart_toEndOf="@+id/tvFScorePlayerOne"
+        app:layout_constraintTop_toTopOf="@+id/tvFScorePlayerOne" />
+
+    <TextView
+        android:id="@+id/tvScoreFPlayerTwo"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginEnd="24dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="72dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView10" />
+
+    <Button
+        android:id="@+id/btHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="GOAL"
+        app:layout_constraintEnd_toEndOf="@+id/tvFScorePlayerOne"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/tvFScorePlayerOne"
+        app:layout_constraintTop_toBottomOf="@+id/tvFScorePlayerOne" />
+
+    <Button
+        android:id="@+id/btVisit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GOAL"
+        app:layout_constraintEnd_toEndOf="@+id/tvScoreFPlayerTwo"
+        app:layout_constraintStart_toStartOf="@+id/tvScoreFPlayerTwo"
+        app:layout_constraintTop_toTopOf="@+id/btHome" />
+
+    <Button
+        android:id="@+id/btFFinish"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Terminar Partida"
+        app:layout_constraintEnd_toEndOf="@+id/btVisit"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btHome"
+        app:layout_constraintTop_toBottomOf="@+id/btHome" />
+
+    <Button
+        android:id="@+id/btFRevange"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Revanche"
+        app:layout_constraintEnd_toEndOf="@+id/btFFinish"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btFFinish"
+        app:layout_constraintTop_toBottomOf="@+id/btFFinish" />
+</androidx.constraintlayout.widget.ConstraintLayout>

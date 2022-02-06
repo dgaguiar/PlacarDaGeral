@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Truco.TrucoScoreActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Truco.TrucoScoreActivity">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Placas da Geral"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.092"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.057" />
+
+        <TextView
+            android:id="@+id/tvPlayerOneScore"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="20dp"
+            android:text="0"
+            android:textAlignment="center"
+            android:textSize="72dp"
+            app:layout_constraintEnd_toStartOf="@+id/textView7"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:text="X"
+            android:textAlignment="center"
+            android:textSize="72dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvPlayerOneScore"
+            app:layout_constraintEnd_toStartOf="@+id/tvPlayerTwoScore"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvPlayerOneScore"
+            app:layout_constraintTop_toTopOf="@+id/tvPlayerOneScore" />
+
+        <TextView
+            android:id="@+id/tvPlayerTwoScore"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:text="0"
+            android:textAlignment="center"
+            android:textSize="72dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView7"
+            app:layout_constraintTop_toTopOf="@+id/textView7" />
+
+        <TextView
+            android:id="@+id/tvPlayerOneName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="CASA"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/tvPlayerOneScore"
+            app:layout_constraintHorizontal_bias="0.467"
+            app:layout_constraintStart_toStartOf="@+id/tvPlayerOneScore"
+            app:layout_constraintTop_toBottomOf="@+id/tvPlayerOneScore" />
+
+        <TextView
+            android:id="@+id/tvPlayerTwoName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="VISITANTE"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/tvPlayerTwoScore"
+            app:layout_constraintHorizontal_bias="0.532"
+            app:layout_constraintStart_toStartOf="@+id/tvPlayerTwoScore"
+            app:layout_constraintTop_toBottomOf="@+id/tvPlayerTwoScore" />
+
+        <Button
+            android:id="@+id/btMinusOnePlayerOne"
+            style="@style/buttom_removePoint"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="39dp"
+            android:layout_marginEnd="16dp"
+            android:text="-1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/btMinusOnePlayerOne"
+            app:layout_constraintTop_toTopOf="@+id/tvPlayerTwoName"
+            tools:ignore="NotSibling" />
+
+        <Button
+            style="@style/buttom_removePoint"
+            android:id="@+id/btMinusOnePlayerTwo"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="-1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPlayerOneName" />
+
+        <Button
+            style="@style/buttom_addition"
+            android:id="@+id/btPlusOnePlayerTwo"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="16dp"
+            android:text="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/btPlusOnePlayerOne"
+            app:layout_constraintTop_toBottomOf="@+id/tvPlayerTwoName" />
+
+        <Button
+            style="@style/buttom_addition"
+            android:id="@+id/btPlusOnePlayerOne"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="70dp"
+            android:text="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPlayerOneName" />
+
+        <Button
+            style="@style/buttom_addition"
+            android:id="@+id/btPlusThreePlayerTwo"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginEnd="16dp"
+            android:text="3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/btPlusThreePlayerOne"
+            app:layout_constraintTop_toBottomOf="@+id/tvPlayerTwoName" />
+
+        <Button
+            style="@style/buttom_addition"
+            android:id="@+id/btPlusThreePlayerOne"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="120dp"
+            android:text="3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPlayerOneName" />
+
+        <Button
+            style="@style/buttom_addition"
+            android:id="@+id/btPlusSixPlayerTwo"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="170dp"
+            android:layout_marginEnd="16dp"
+            android:text="6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/btPlusSixPlayerOne"
+            app:layout_constraintTop_toBottomOf="@+id/tvPlayerTwoName" />
+
+        <Button
+            style="@style/buttom_addition"
+            android:id="@+id/btPlusSixPlayerOne"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="170dp"
+            android:text="6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPlayerOneName" />
+
+        <Button
+            style="@style/buttom_addition"
+            android:id="@+id/btPlusNinePlayerTwo"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="220dp"
+            android:layout_marginEnd="16dp"
+            android:text="9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/btPlusNinePlayerOne"
+            app:layout_constraintTop_toBottomOf="@+id/tvPlayerTwoName" />
+
+        <Button
+            style="@style/buttom_addition"
+            android:id="@+id/btPlusNinePlayerOne"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="220dp"
+            android:text="9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPlayerOneName" />
+
+        <Button
+            style="@style/buttom_addition"
+            android:id="@+id/btPlusTwelvePlayerTwo"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="270dp"
+            android:layout_marginEnd="16dp"
+            android:text="12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/btPlusTwelvePlayerOne"
+            app:layout_constraintTop_toBottomOf="@+id/tvPlayerTwoName" />
+
+        <Button
+            style="@style/buttom_addition"
+            android:id="@+id/btPlusTwelvePlayerOne"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="270dp"
+            android:text="12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPlayerOneName" />
+
+        <Button
+            android:id="@+id/btFinishMatch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="TERMINAR PARTIDA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btPlusTwelvePlayerOne" />
+
+        <Button
+            android:id="@+id/btRevenge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="REVANCHE"
+            app:layout_constraintEnd_toEndOf="@+id/btFinishMatch"
+            app:layout_constraintStart_toStartOf="@+id/btFinishMatch"
+            app:layout_constraintTop_toBottomOf="@+id/btFinishMatch" />
+
+        <Button
+            android:id="@+id/btShareWhatsapp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Compartilhar pelo Whatsapp"
+            app:layout_constraintEnd_toEndOf="@+id/btRevenge"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/btRevenge"
+            app:layout_constraintTop_toBottomOf="@+id/btRevenge" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
